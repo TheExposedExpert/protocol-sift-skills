@@ -107,14 +107,14 @@ Search a specific evtx log for logon events, with a matching regex pattern, outp
 
 ## Using custom Sigma rules
 
-Using the --sigma and --mapping parameters you can specify a directory containing a subset
-of SIGMA detection rules (or just the entire SIGMA git repo) and chainsaw will automatically
-load, convert and run these rules against the provided event logs. The mapping file tells
-chainsaw which fields in the event logs to use for rule matching. See the mapping file for the
-full list of fields that are used for rule detection, and feel free to extend it to your needs.
+Using the --sigma and --mapping parameters you can specify a directory containing a subset<br>
+of SIGMA detection rules (or just the entire SIGMA git repo) and chainsaw will automatically<br>
+load, convert and run these rules against the provided event logs. The mapping file tells<br>
+chainsaw which fields in the event logs to use for rule matching. See the mapping file for the<br>
+full list of fields that are used for rule detection, and feel free to extend it to your needs.<br>
 
 
 ## Using custom rules
 
-In addition to supporting sigma rules, Chainsaw also supports a custom rule format.
+In addition to supporting sigma rules, Chainsaw also supports a custom rule format.<br>
 In the repository you will find a "rules" directory that contains various Chainsaw rules.
