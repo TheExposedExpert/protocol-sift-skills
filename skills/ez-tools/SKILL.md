@@ -66,7 +66,7 @@ dotnet /opt/zimmermantools/PECmd.dll \
 dotnet /opt/zimmermantools/PECmd.dll -f ./exports/prefetch/<FILE>.pf
 ```
 
-Key: confirms execution + last **8** run timestamps + referenced DLLs and files.
+Key: confirms execution + last **8** run timestamps + referenced DLLs and files.<br>
 Prefetch is disabled on Windows Server by default.
 
 ### Shimcache / AppCompatCache
@@ -91,7 +91,7 @@ dotnet /opt/zimmermantools/AppCompatCacheParser.dll \
   --csv ./exports/shimcache/
 ```
 
-Key: presence confirms the file **existed** on disk. Does NOT confirm execution on Win8+.
+Key: presence confirms the file **existed** on disk. Does NOT confirm execution on Win8+.<br>
 Ordered chronologically by last run on Win7; unordered on Win8+.
 
 **AppCompatCacheParser flags:**
@@ -235,7 +235,7 @@ Key: records every file create/modify/delete/rename with timestamps. Survives de
 
 ### RECmd — Batch Mode (Recommended)
 
-RECmd batch mode runs an entire collection of community-maintained queries against
+RECmd batch mode runs an entire collection of community-maintained queries against<br>
 one or more hive files simultaneously, extracting all known forensic artifacts.
 
 ```bash
@@ -254,8 +254,8 @@ dotnet /opt/zimmermantools/RECmd/RECmd.dll \
   --csvf all_hives_batch.csv
 ```
 
-Batch files are in `/opt/zimmermantools/RECmd/BatchExamples/`.
-`Kroll_Batch.reb` covers: UserAssist, RecentDocs, TypedPaths, MRU, USB, Run keys,
+Batch files are in `/opt/zimmermantools/RECmd/BatchExamples/`.<br>
+`Kroll_Batch.reb` covers: UserAssist, RecentDocs, TypedPaths, MRU, USB, Run keys,<br>
 WordWheelQuery, OpenSaveMRU, and many more.
 
 **RECmd targeted query flags:**
@@ -311,7 +311,7 @@ WordWheelQuery, OpenSaveMRU, and many more.
 
 ## Shellbags
 
-Shellbags record folder browsing history (local, network, removable media) — persists
+Shellbags record folder browsing history (local, network, removable media) — persists<br>
 even after directories/drives are removed.
 
 ```bash
@@ -366,7 +366,7 @@ dotnet /opt/zimmermantools/LECmd.dll \
   --csvf lnk_parsed.csv
 ```
 
-Key: reveals target file paths, MAC times, volume serial numbers, and network shares —
+Key: reveals target file paths, MAC times, volume serial numbers, and network shares —<br>
 even if the target file no longer exists.
 
 ---
@@ -403,7 +403,7 @@ dotnet /opt/zimmermantools/SrumECmd.dll \
 
 `SRUDB.dat` is located at `C:\Windows\System32\sru\SRUDB.dat`.
 
-Key: records per-application network bytes sent/received, CPU time, and energy use
+Key: records per-application network bytes sent/received, CPU time, and energy use<br>
 with timestamps. Confirms execution and C2 data transfer volumes.
 
 ---
