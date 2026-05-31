@@ -1,8 +1,8 @@
 # Skill: EZ Tools
 
 ## Overview
-Use this skill to process artefacts with EZ Tools on the SIFT workstation.
-Covers Eric Zimmerman (EZ) Tools, ASEP/persistence analysis, Windows event log parsing,
+Use this skill to process artefacts with EZ Tools on the SIFT workstation.<br>
+Covers Eric Zimmerman (EZ) Tools, ASEP/persistence analysis, Windows event log parsing,<br>
 and execution/access evidence artifacts.
 
 
@@ -10,7 +10,7 @@ and execution/access evidence artifacts.
 
 ## EZ Tools — Running on Linux (SIFT)
 
-All EZ Tools are installed at `/opt/zimmermantools/`. On Linux they run via the
+All EZ Tools are installed at `/opt/zimmermantools/`. On Linux they run via the<br>
 .NET runtime using the `.dll` file — **not** the `.exe` (which is a Windows PE binary).
 
 ```bash
@@ -21,7 +21,7 @@ dotnet /opt/zimmermantools/<ToolName>.dll [options]
 dotnet /opt/zimmermantools/<Subdir>/<ToolName>.dll [options]
 ```
 
-> **GUI tools** (TimelineExplorer, RegistryExplorer, MFTExplorer, ShellBagsExplorer)
+> **GUI tools** (TimelineExplorer, RegistryExplorer, MFTExplorer, ShellBagsExplorer)<br>
 > are Windows PE applications. Run via `wine` on SIFT, or use the Windows analysis VM.
 
 ### Tool Reference
@@ -46,7 +46,7 @@ dotnet /opt/zimmermantools/<Subdir>/<ToolName>.dll [options]
 | RegistryExplorer | `wine /opt/zimmermantools/RegistryExplorer/RegistryExplorer.exe` | GUI registry browser |
 | VSCMount | **Windows only** — will NOT run on SIFT Linux | Volume Shadow Copy mount tool |
 
-> **VSCMount note:** `dotnet /opt/zimmermantools/VSCMount.dll` prints "Mounting VSCs only
+> **VSCMount note:** `dotnet /opt/zimmermantools/VSCMount.dll` prints "Mounting VSCs only<br>
 > supported on Windows. Exiting" on Linux. Use TSK's `mmls` + `icat` for VSS access on SIFT.
 
 ---
