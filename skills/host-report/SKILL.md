@@ -103,6 +103,7 @@ Applications installed for each user account are located in user profile registr
 Also list applications which are not included in system wide registry, but are only available directly under Program Files directories: 
 - 64-bit applications: C:\Program Files\<ApplicationName>\
 - 32-bit applications: C:\Program Files (x86)\<ApplicationName>\
+  
 Some old applications are only copied to local disk without installation through separate setup .exe or .msi files.
 
 
@@ -148,4 +149,5 @@ RegRipper tool can be used to parse Advanced Audit Policy configuration from Sec
 Compare current Advanced Audit Policy configuration against Microsoft System audit policy recommendations documentation:
 - Windows Workstation: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/audit-policy-recommendations?tabs=winclient
 - Windows Server: https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/audit-policy-recommendations?tabs=winserver
+  
 User Stronger recommendation settings for the comparison.
