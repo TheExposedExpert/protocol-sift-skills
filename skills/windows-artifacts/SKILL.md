@@ -12,7 +12,7 @@ ALWAYS hunt for known malicious case related IOCs against processed evidence art
 
 ## Windows Event Logs
 
-Verify all available event IDs and their relation to the investigation.
+Verify all available event IDs and their relation to the investigation.<br>
 Investigate at least the below event log files/channels.
 
 | Channel | EVTX File Name |
@@ -36,14 +36,14 @@ Investigate at least the below event log files/channels.
 
 Investigate other event log files/channels as needed.
 
-Pay attention to the role of the investigated system.
-Investigate T0-systems with extra attention.
-Audit policy configuration often includes Active Directory Domain Services related events
+Pay attention to the role of the investigated system.<br>
+Investigate T0-systems with extra attention.<br>
+Audit policy configuration often includes Active Directory Domain Services related events<br>
 Events include enumeration activity and CRUDL events against domain objects.
 
-Assessment of certainty can be increased via multiple artifacts indicating same activity.
-For example, if PowerShell, Security, and Sysmon logs all include similar process creation activity at the same time.
-Do not be satisfied with investigation results after only a single source indicating certain activity. 
+Assessment of certainty can be increased via multiple artifacts indicating same activity.<br>
+For example, if PowerShell, Security, and Sysmon logs all include similar process creation activity at the same time.<br>
+Do not be satisfied with investigation results after only a single source indicating certain activity.<br>
 Verify multiple sources for increasing assessment of certainty.
 
 
@@ -107,7 +107,7 @@ Key Event IDs for Task Scheduler:
 | Sysmon | 12 | RegistryEvent (Object create and delete) |
 | Sysmon | 13 | RegistryEvent (Value Set) |
 
-Registry events are generated under registry key "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\".
+Registry events are generated under registry key "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\".<br>
 File events are generated under folder path "C:\Windows\System32\Tasks\".
 
 References:
@@ -178,7 +178,7 @@ References:
 
 ## PowerShell Remoting (WinRM)
 
-Child process creation by WSMPROVHOST.EXE.
+Child process creation by WSMPROVHOST.EXE.<br>
 Correlate child process creation events with successful logon events.
 
 References:
@@ -189,7 +189,7 @@ References:
 
 ## Windows Management Instrumentation (WMI)
 
-Child process creation by wmiprvse.exe.
+Child process creation by wmiprvse.exe.<br>
 Correlate child process creation events with successful logon events.
 
 Executed binary names:
@@ -203,7 +203,7 @@ References:
 
 ## Distributed Component Object Model (DCOM)
 
-Child process creation by "C:\Windows\system32\svchost.exe -k DcomLaunch"
+Child process creation by "C:\Windows\system32\svchost.exe -k DcomLaunch"<br>
 Correlate child process creation events with successful logon events.
 
 References:
@@ -214,7 +214,7 @@ References:
 
 ## PsExec
 
-Detect Windows service creation.
+Detect Windows service creation.<br>
 Correlate service creation events with successful logon events.
 
 Executed binary names:
